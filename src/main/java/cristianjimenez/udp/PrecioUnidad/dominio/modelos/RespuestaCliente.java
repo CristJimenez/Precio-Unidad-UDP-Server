@@ -41,11 +41,11 @@ public final class RespuestaCliente {
         return new RespuestaCliente(destinatario, TipoRespuesta.DESCONECTADO, null, mensaje);
     }
 
-    public static RespuestaCliente calculoExitoso(final Destinatario destinatario, final String mensaje) {
+    public static RespuestaCliente calculoExitoso(final Destinatario destinatario, final Resultado resultado) {
         return new RespuestaCliente(destinatario, TipoRespuesta.OK_CALCULO, resultado, null);
     }
 
-    public static RespuestaCliente error(final Destinatario destinatario, final String mensaje) {
+    public static RespuestaCliente error(final Destinatario destinatario, final String mensajeError) {
         return new RespuestaCliente(destinatario, TipoRespuesta.ERROR, null, mensajeError);
     }
 
