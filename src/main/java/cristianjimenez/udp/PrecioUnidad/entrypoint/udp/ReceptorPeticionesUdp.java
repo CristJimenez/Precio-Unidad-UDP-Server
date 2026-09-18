@@ -43,7 +43,7 @@ public final class ReceptorPeticionesUdp {
         hiloEscucha.start();
     }
 
-    private synchronized void detener() {
+    public synchronized void detener() {
         escuchando = false;
 
         if (Objects.nonNull(hiloEscucha) && hiloEscucha.isAlive()) {
